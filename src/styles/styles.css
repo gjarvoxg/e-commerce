@@ -14,3 +14,9 @@ ul{
 a {
     text-decoration: none;
 }
+:root {
+    --clr-main: #Efb810;
+    --clr-white: #ececec;
+    --clr-grey: #e2e2e2;
+    --clr-red: #961818;
+}
