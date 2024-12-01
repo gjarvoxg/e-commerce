@@ -15,8 +15,8 @@ a {
     text-decoration: none;
 }
 :root {
-    --clr-main: #Efb810;
-    --clr-main-dark: #c79a14;
+    --clr-main: #b98f10;
+    --clr-main-dark: #91700f;
     --clr-white: #ececec;
     --clr-grey: #e2e2e2;
     --clr-red: #961818;
@@ -93,11 +93,58 @@ main{
     background-color: var(--clr-main-dark);
     color: var(--clr-white);
 }
+
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-shopCar {
+    margin-top: 3rem;
+}
+
 .button-menu {
     background-color: transparent;
     border: 0;
     color: var(--clr-white);
+    gap: 1rem;
     font-size: 1rem;
-    padding: 1rem;
     cursor: pointer;
+    display: flex;
+    font-weight: 600;
+    padding: 1.25rem 0 ;
+    padding-left: 1rem;
 }
+
+.button-menu.active {
+    background-color: var(--clr-white);
+    color: var(--clr-main);
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    position: relative;
+}
+.button-menu.active::before{
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    width: 1rem;
+    height: 2rem;
+    bottom: 100%;
+    right: 0;
+    border-bottom-right-radius: 0.5rem ;
+    box-shadow: 0 1rem 0 var(--clr-white);
+}
+.button-menu.active::after{
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    width: 1rem;
+    height: 2rem;
+    top: 100%;
+    right: 0;
+    border-top-right-radius: 0.5rem ;
+    box-shadow: 0 -1rem 0 var(--clr-white);
+}
+
+/*shoppinh car html*/
