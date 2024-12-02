@@ -168,10 +168,16 @@ const products = [
 
 //call products to inner in the html
 
-const containerProducts = document.querySelector("#container-products")
+const containerProducts = document.querySelector("#container-products");
+const categoryButtons = document.querySelectorAll(".button-category");
+const principalTitle = document.querySelector("#principal-tittle");
+let addButtons = document.querySelectorAll(".product-add")
 
-const chargeProducts = ()=>{
-    products.forEach(product=>{
+//funcion para llamar los productos del array al html
+
+const chargeProducts = (productsActive)=>{
+    containerProducts.innerHTML = "";
+    productsActive.forEach(product=>{
         const div = document.createElement("div");
         div.classList.add("product");
         div.innerHTML = `
@@ -185,4 +191,29 @@ const chargeProducts = ()=>{
         containerProducts.append(div)
     })
 }
-chargeProducts();
+chargeProducts(products);
+
+//funcion para mantener activo el estilo de "active" en solo 1 categoria
+
+categoryButtons.forEach(button => {
+    button.addEventListener("click", (e) =>{
+        categoryButtons.forEach(button => button.classList.remove("active"));
+        e.currentTarget.classList.add("active");
+        if(e.currentTarget.id != "all"){
+            const productCategory = products.find(product => product.category.id === e.currentTarget.id)
+            principalTitle.innerText = productCategory.category.nameItem;
+
+            const productActive = products.filter(product => product.category.id === e.currentTarget.id);
+            chargeProducts(productActive);
+        }else{
+        principalTitle.innerText = "All products";
+        chargeProducts(products);
+        }
+    })
+})
+
+//funcion agregar botones a unn array
+
+const addButtonsToArray = () => {
+    addButtons = document.querySelectorAll(".product-add")
+}

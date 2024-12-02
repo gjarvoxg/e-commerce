@@ -87,6 +87,7 @@ main{
     border-radius: 2rem;
     border: 2px solid var(--clr-white);
     transition: background-color 0.15s, color 0.15s ;
+    cursor: pointer;
 }
 .product-add:hover{
     background-color: var(--clr-main-dark);
@@ -112,13 +113,13 @@ main{
     display: flex;
     font-weight: 600;
     padding: 1.25rem 0 ;
+    width: 100%;
     padding-left: 1rem;
 }
 
 .button-menu.active {
     background-color: var(--clr-white);
     color: var(--clr-main);
-    width: 100%;
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
     position: relative;
