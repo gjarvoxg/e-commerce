@@ -1,43 +1,43 @@
 //PRODUCTS
 const products = [
-    //Chaquetas
+    //jackets
     {
-        id:"chaqueta-01",
-        tittle: "Chaqueta 01",
-        img:"",
+        id:"jacket-01",
+        tittle: "Jacket 01",
+        img:"https://dl.dropboxusercontent.com/scl/fi/85t9kyjpf8uxr0kkra180/Leonardo_Kino_XL_hazme_4_imagenes_de_modelos_mujeres_posando_c_0.jpg?rlkey=7mbgoz0cr3x69y5zvazqszaym&st=pgv4srbd&dl=0",
         category: {
-            nameItem: "CHAQUETAS",
-            id: "chaquetas"
+            nameItem: "Jacket",
+            id: "jacket"
         },
         price: 1000
     },
     {
-        id:"chaqueta-02",
-        tittle: "Chaqueta 02",
-        img:"",
+        id:"jacket-02",
+        tittle: "Jacket 02",
+        img:"https://dl.dropboxusercontent.com/scl/fi/cs6ynesvlo7eoe2b31sqy/Leonardo_Kino_XL_hazme_4_imagenes_de_modelos_mujeres_posando_c_3.jpg?rlkey=j6dgza8ampm4m5scmqco6xen5&st=py11ncqo&dl=0",
         category: {
-            nameItem: "CHAQUETAS",
-            id: "chaquetas"
+            nameItem: "Jacket",
+            id: "jacket"
         },
         price: 1000
     },
     {
-        id:"chaqueta-03",
-        tittle: "Chaqueta 03",
-        img:"",
+        id:"jacket-03",
+        tittle: "Jacket 03",
+        img:"https://dl.dropboxusercontent.com/scl/fi/fxa7fkr3vf3ecmoqv7mt3/Leonardo_Kino_XL_Make_me_4_images_of_female_models_posing_with_2.jpg?rlkey=dd1fsfd7iqf66mbnl96erit5z&st=lw3apsx2&dl=0",
         category: {
-            nameItem: "CHAQUETAS",
-            id: "chaquetas"
+            nameItem: "Jacket",
+            id: "jacket"
         },
         price: 1000
     },
     {
-        id:"chaqueta-04",
-        tittle: "Chaqueta 04",
-        img:"",
+        id:"jacket-04",
+        tittle: "Jacket 04",
+        img:"https://dl.dropboxusercontent.com/scl/fi/x4hmmuumgdxo0nbdse6ql/Leonardo_Kino_XL_Make_me_4_images_of_female_models_posing_with_3.jpg?rlkey=uvciessbgokogvav3dr2t1meq&st=l0v7jmp1&dl=0",
         category: {
-            nameItem: "CHAQUETAS",
-            id: "chaquetas"
+            nameItem: "Jacket",
+            id: "jacket"
         },
         price: 1000
     },

@@ -81,13 +81,12 @@ main{
 }
 .product-add {
     background-color: var(--clr-white);
-    border: 0;
     text-transform: uppercase;
     padding: 0.25rem;
     color: var(--clr-main-dark);
     border-radius: 2rem;
     border: 2px solid var(--clr-white);
-    transition: background-color 0.2s, color 0.2s ;
+    transition: background-color 0.15s, color 0.15s ;
 }
 .product-add:hover{
     background-color: var(--clr-main-dark);
@@ -147,4 +146,99 @@ main{
     box-shadow: 0 -1rem 0 var(--clr-white);
 }
 
+.number-sc{
+    background-color: var(--clr-white);
+    padding: 0.15rem 0.35rem;
+    border-radius: 0.25rem;
+    color: var(--clr-main);
+}
+
 /*shoppinh car html*/
+
+.container-shopCar{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.empty-sc, .buying-sc{
+    color:var(--clr-main);
+}
+.sc-product-img {
+    width: 4rem;
+    border-radius: 1rem;
+}
+.sc-products{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sc-product{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--clr-grey);
+    color: var(--clr-main);
+    border-radius: 2rem;
+}
+.sc-product small {
+    font-size: 0.75rem;
+}
+.sc-product-delete {
+    border: 0;
+    background-color: transparent;
+    color: var(--clr-red);
+    padding-right: 2rem;
+    cursor: pointer;
+}
+.sc-actions {
+    display: flex;
+    justify-content: space-between;
+}
+.clean-sc{
+    border: 2px solid var(--clr-grey);
+    border-radius: 1rem;
+    color: var(--clr-main);
+    background-color: var(--clr-grey);
+    padding: 1rem;
+    text-transform: uppercase ;
+    transition: background-color 0.15s, color 0.15s;
+    cursor: pointer;
+}
+.clean-sc:hover{
+    background-color: var(--clr-main-dark);
+    color: var(--clr-grey);
+}
+.sc-actions-buy{
+    border: 2px solid var(--clr-main);
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    color: var(--clr-white);
+    background-color: var(--clr-main);
+    padding: 1rem;
+    text-transform: uppercase ;
+    transition: background-color 0.15s, color 0.15s;
+    cursor: pointer;
+}
+.sc-actions-buy:hover{
+    background-color: var(--clr-main-dark);
+    color: var(--clr-grey);
+}
+.sc-actions-right{
+    display: flex;
+}
+.sc-actions-total{
+    display: flex;
+    border: 2px solid var(--clr-grey);
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    color: var(--clr-main);
+    background-color: var(--clr-grey);
+    padding: 1rem;
+    text-transform: uppercase ;
+    gap: 1rem;
+}
+.disabled{
+    display: none;
+}
