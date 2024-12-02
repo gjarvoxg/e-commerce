@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link  rel="stylesheet" href="/dist/styles/styles.css">
+    <link  rel="stylesheet" href="/src/styles/styles.css">
     <title>Document</title>
 </head>
 <body>
@@ -32,68 +32,29 @@
         <main>
             <h2 class="principal-tittle">Shopping Car <i class="bi bi-cart-check"></i></h2>            
             <div class="container-shopCar">
-               <p class="empty-sc">Your shooping car is empty <i class="bi bi-emoji-frown-fill"></i></p>
+               <p id="empty-sc" class="empty-sc">Your shooping car is empty <i class="bi bi-emoji-frown-fill"></i></p>
 
-               <div class="sc-products disabled">
-                <div class="sc-product">
-                    <img class="sc-product-img" src="https://dl.dropboxusercontent.com/scl/fi/85t9kyjpf8uxr0kkra180/Leonardo_Kino_XL_hazme_4_imagenes_de_modelos_mujeres_posando_c_0.jpg?rlkey=7mbgoz0cr3x69y5zvazqszaym&st=pgv4srbd&dl=0" alt="Jacket 01">
-                <div class="sc-product-tittle">
-                    <small>Product name</small>
-                    <h3>Jacket 01</h3>
-                </div>
-                <div class="sc-product-quantity">
-                    <small>Quantity</small>
-                    <p>1</p>
-                </div>
-                <div class="sc-product-price">
-                    <small>Price</small>
-                    <p>$1000</p>
-                </div>
-                <div class="sc-product-subTotal">
-                    <small>Subtotal</small>
-                    <p>$1000</p>
-                </div>
-                <button class="sc-product-delete"><i class="bi bi-trash-fill"></i></button>
-                </div>        
-                <div class="sc-product">
-                    <img class="sc-product-img" src="https://dl.dropboxusercontent.com/scl/fi/cs6ynesvlo7eoe2b31sqy/Leonardo_Kino_XL_hazme_4_imagenes_de_modelos_mujeres_posando_c_3.jpg?rlkey=j6dgza8ampm4m5scmqco6xen5&st=py11ncqo&dl=0" alt="Jacket 02">
-                <div class="sc-product-tittle">
-                    <small>Product name</small>
-                    <h3>Jacket 02</h3>
-                </div>
-                <div class="sc-product-quantity">
-                    <small>Quantity</small>
-                    <p>2</p>
-                </div>
-                <div class="sc-product-price">
-                    <small>Price</small>
-                    <p>$1000</p>
-                </div>
-                <div class="sc-product-subTotal">
-                    <small>Subtotal</small>
-                    <p>$2000</p>
-                </div>
-                <button class="sc-product-delete"><i class="bi bi-trash-fill"></i></button>
-                </div>                        
+               <div id="sc-products" class="sc-products disabled">
+                <!--relleno con js-->                       
                </div>
-               <div class="sc-actions disabled">
+               <div id="sc-actions" class="sc-actions disabled">
                <div class="sc-actions-left">
-                <button class="clean-sc">Clean Shopping Car</button>
+                <button id="clean-sc" class="clean-sc">Clean Shopping Car</button>
                </div>
                <div class="sc-actions-right">
                 <div class="sc-actions-total">
                     <p>Total: </p>
                     <p id="total">$3000</p>
                 </div>
-                <button class="sc-actions-buy">Buy now</button>
+                <button id="buy-sc" class="sc-actions-buy">Buy now</button>
                </div>
             </div>
-            <p class="buying-sc disabled">Thank you for your purchase! We hope to see you again soon... <i class="bi bi-emoji-laughing-fill"></i></p>
+            <p id="buyed-sc" class="buyed-sc disabled">Thank you for your purchase! We hope to see you again soon... <i class="bi bi-emoji-laughing-fill"></i></p>
             </div>
 
         </main>
     </div>
 
-    <script src="/dist/js/shopCar.js"></script>
+    <script src="/src/js/shopCar.js"></script>
 </body>
 </html>

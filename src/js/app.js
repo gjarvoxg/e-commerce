@@ -171,7 +171,8 @@ const products = [
 const containerProducts = document.querySelector("#container-products");
 const categoryButtons = document.querySelectorAll(".button-category");
 const principalTitle = document.querySelector("#principal-tittle");
-let addButtons = document.querySelectorAll(".product-add")
+let addButtons = document.querySelectorAll(".product-add");
+const numberSc = document.querySelector("#number-sc");
 
 //funcion para llamar los productos del array al html
 
@@ -185,11 +186,12 @@ const chargeProducts = (productsActive)=>{
         <div class="product-details">
         <h3 class="product-tittle">${product.tittle}</h3>
         <p class="product-price">$${product.price}</p>
-        <button class="product-add" id="${product.id}">Add to Shopping Car</button>
+        <button class="product-add" id="${product.id}"><i class="bi bi-cart-plus-fill"></i></button>
         </div>
         `
         containerProducts.append(div)
     })
+
 }
 chargeProducts(products);
 
@@ -212,8 +214,66 @@ categoryButtons.forEach(button => {
     })
 })
 
-//funcion agregar botones a unn array
 
-const addButtonsToArray = () => {
+//funcion agregar productos
+
+
+const updateAddButtons=()=>{
     addButtons = document.querySelectorAll(".product-add")
+    addButtons.forEach(button =>{
+        button.addEventListener("click", addToSc)
+    })
+}
+
+let productOnSc;
+let productOnScLs = localStorage.getItem("items-on-sc");
+
+if(productOnScLs){
+    productOnSc = JSON.parse(productOnScLs);
+    updateNumber();
+}else{
+    productOnSc = [];
+
+}
+function agregarAlCarrito(e) {
+
+    Toastify({
+        text: "Product added",
+        duration: 3000,
+        close: true,
+        gravity: "top", 
+        position: "right", 
+        stopOnFocus: true, 
+        style: {
+          background: "linear-gradient(to right, #4b33a8, #785ce9)",
+          borderRadius: "2rem",
+          textTransform: "uppercase",
+          fontSize: ".75rem"
+        },
+        offset: {
+            x: '1.5rem', 
+            y: '1.5rem' 
+          },
+        onClick: function(){} 
+      }).showToast();
+
+    const idButton = e.currentTarget.id;
+    const addedProducts = products.find(product => product.id === idButton);
+
+    if(productOnSc.some(product => product.id === idButton)) {
+        const index = productOnSc.findIndex(product => product.id === idButton);
+        productosEnCarrito[index].cantidad++;
+    } else {
+        addedProducts.quantity = 1;
+        productOnSc.push(addedProducts);
+    }
+
+    updateNumber();
+
+    localStorage.setItem("items-on-sc", JSON.stringify(productOnSc));
+}
+
+const updateNumber =()=>{
+    let littleNumber = productOnSc.reduce((acc, product) => acc + product.quantity, 0)
+    numberSc.innerText = littleNumber
 }
