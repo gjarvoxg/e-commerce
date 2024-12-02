@@ -45,7 +45,7 @@ const products = [
     {
         id:"jean-01",
         tittle: "Jean 01",
-        img:"",
+        img:"https://dl.dropboxusercontent.com/scl/fi/3cchtnieogfx9rsy84cuw/pants-04.jpg?rlkey=5sub965yazkw6i00hz97fn5ec&st=ml6cer0a&dl=0",
         category: {
             nameItem: "Jeans",
             id: "jeans"
@@ -55,7 +55,7 @@ const products = [
     {
         id:"jean-02",
         tittle: "Jean 02",
-        img:"",
+        img:"https://dl.dropboxusercontent.com/scl/fi/6nzhrv13g3dsszjhhjbx5/pants-01.jpg?rlkey=wxywlmj6de7au4saf4c44myh8&st=glf4tknc&dl=0",
         category: {
             nameItem: "Jeans",
             id: "jeans"
@@ -65,7 +65,7 @@ const products = [
     {
         id:"jean-03",
         tittle: "Jean 03",
-        img:"",
+        img:"https://dl.dropboxusercontent.com/scl/fi/23uycop0p373xjhvcvi64/pants-02.jpg?rlkey=qybiywzh59lsv9e79qkcsopie&st=cythutdh&dl=0",
         category: {
             nameItem: "Jeans",
             id: "jeans"
@@ -75,7 +75,7 @@ const products = [
     {
         id:"jean-04",
         tittle: "Jean 04",
-        img:"",
+        img:"https://dl.dropboxusercontent.com/scl/fi/vn5qv8kgbmuyh84ikhjo4/pants-03.jpg?rlkey=hyv97cxf8yqj96qlf8w962idb&st=svoimlax&dl=0",
         category: {
             nameItem: "Jeans",
             id: "jeans"
@@ -86,7 +86,7 @@ const products = [
     {
         id:"short-01",
         tittle: "Short 01",
-        img:"",
+        img:"https://dl.dropboxusercontent.com/scl/fi/e2zvjmgfwifz4fp64vt82/short-01.jpg?rlkey=tqxixd236mmda54vey8hoq0wl&st=55j0aho8&dl=0",
         category: {
             nameItem: "Short",
             id: "short"
@@ -96,7 +96,7 @@ const products = [
     {
         id:"short-02",
         tittle: "Short 02",
-        img:"",
+        img:"https://dl.dropboxusercontent.com/scl/fi/l4g5qq5h8uhe38k8x51ml/short-02.jpg?rlkey=tc23xt128d9sbj05cp9zq93p8&st=sob71abq&dl=0",
         category: {
             nameItem: "Short",
             id: "short"
@@ -106,7 +106,7 @@ const products = [
     {
         id:"short-03",
         tittle: "Short 03",
-        img:"",
+        img:"https://dl.dropboxusercontent.com/scl/fi/gsmdok6d4a20xdmee4ro4/short-03.jpg?rlkey=zuhhde8jynns56bvc46c8y5to&st=bsybxtrv&dl=0",
         category: {
             nameItem: "Short",
             id: "short"
@@ -116,7 +116,7 @@ const products = [
     {
         id:"short-04",
         tittle: "Short 04",
-        img:"",
+        img:"https://dl.dropboxusercontent.com/scl/fi/qekk20vgo2uk4kh8y9i9q/short-04.jpg?rlkey=dpkt21pg0nq984c3oa1uulijy&st=1ztvja2n&dl=0",
         category: {
             nameItem: "Short",
             id: "short"
@@ -127,7 +127,7 @@ const products = [
     {
         id:"shirt-01",
         tittle: "Shirt 01",
-        img:"",
+        img:"https://dl.dropboxusercontent.com/scl/fi/kv6nf8bawzj6nxvdufg0c/shirt-01.jpg?rlkey=kfqgl5yuaxehtz9t3buym3rdv&st=bjt8j2no&dl=0",
         category: {
             nameItem: "Shirt",
             id: "shirt"
@@ -137,7 +137,7 @@ const products = [
     {
         id:"shirt-02",
         tittle: "Shirt 02",
-        img:"",
+        img:"https://dl.dropboxusercontent.com/scl/fi/tr7b2upy1l5hh9eb5o0xs/shirt-02.jpg?rlkey=acoxo9864lte2h20pspqni05d&st=gsl0atgb&dl=0",
         category: {
             nameItem: "Shirt",
             id: "shirt"
@@ -147,7 +147,7 @@ const products = [
     {
         id:"shirt-03",
         tittle: "Shirt 03",
-        img:"",
+        img:"https://dl.dropboxusercontent.com/scl/fi/qkswfmnjk9cune0j4fiv8/shirt-03.jpg?rlkey=hcmb2r7882sx3j5w7o6agzl6r&st=ivz7odlb&dl=0",
         category: {
             nameItem: "Shirt",
             id: "shirt"
@@ -157,7 +157,7 @@ const products = [
     {
         id:"shirt-04",
         tittle: "Shirt 04",
-        img:"",
+        img:"https://dl.dropboxusercontent.com/scl/fi/5n0dxegs9m0zw1yd090xm/shirt-04.jpg?rlkey=wz8bkct7bn818c0hhvu9q0n9w&st=pdaz8byo&dl=0",
         category: {
             nameItem: "Shirt",
             id: "shirt"
@@ -165,3 +165,24 @@ const products = [
         price: 1000
     },
 ]
+
+//call products to inner in the html
+
+const containerProducts = document.querySelector("#container-products")
+
+const chargeProducts = ()=>{
+    products.forEach(product=>{
+        const div = document.createElement("div");
+        div.classList.add("product");
+        div.innerHTML = `
+        <img class="product-img" src="${product.img}" alt="${product.tittle}">
+        <div class="product-details">
+        <h3 class="product-tittle">${product.tittle}</h3>
+        <p class="product-price">$${product.price}</p>
+        <button class="product-add" id="${product.id}">Add to Shopping Car</button>
+        </div>
+        `
+        containerProducts.append(div)
+    })
+}
+chargeProducts();
